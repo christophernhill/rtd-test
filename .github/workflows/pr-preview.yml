@@ -20,5 +20,5 @@ jobs:
       - name: build-docs
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./build/
+          source-dir: ./
           action: deploy
