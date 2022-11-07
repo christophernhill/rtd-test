@@ -74,8 +74,8 @@ html_logo = 'images/orcd-logo.png'
 html_context = {
     'vcs_pageview_mode': 'edit',
     'display_github': True,
-    'github_user': 'mit-orcd', # Username
-    'github_repo': 'orcd-docs-edit', # Repo name
+    'github_user': christophernhill', # Username
+    'github_repo': 'rtd-test', # Repo name
     'github_version': 'main', # Version
     'conf_py_path': '/', # Path in the checkout to the docs root
 }
