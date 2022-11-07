@@ -9,7 +9,7 @@ on:
 
 env:
   # repository where built doc will be published
-  TARGET_REPO: christophernhill/rtd-test-pub
+  TARGET_REPO: christophernhill/rtd-test-publish
         
 jobs:
   buildpages:
