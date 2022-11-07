@@ -1,2 +1,2 @@
 # rtd-test
-quick testing of some rib ci and build
+quick testing of some rtd ci and build
