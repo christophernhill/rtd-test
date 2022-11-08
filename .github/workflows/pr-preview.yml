@@ -29,19 +29,14 @@ jobs:
           touch _build/html/.nojekyll
           ls -altr _build/html
 
-      - name: checkout-tree
-        uses: rossjrw/pr-preview-action@v1
-        with:
-          source-dir: ./_build/html
-          action: deploy
+          ### - name: checkout-tree
+          ### uses: rossjrw/pr-preview-action@v1
+          ### with:
+          ### source-dir: ./_build/html
+          ### action: deploy
 
       - name: create-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
+          name: pr-preview-artifact
           path: /home/runner/work/rtd-test/rtd-test/_build/html/
-
-      - name: whats-going-on
-        run : |
-          /bin/pwd
-          /bin/ls -altr
