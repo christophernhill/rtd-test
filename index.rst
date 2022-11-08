@@ -26,6 +26,8 @@ More header
 Header 3
 --------
 
+  Some header 3 text
+
 Header 4
 --------
 
