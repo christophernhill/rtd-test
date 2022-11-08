@@ -18,7 +18,7 @@ jobs:
         run: |
           python3 -m pip install -U pip
           python3 -m pip install -r requirements.txt
-
+          
       - name: add_path
         run: |
           echo "/home/runner/.local/bin" >> $GITHUB_PATH
@@ -34,3 +34,9 @@ jobs:
         with:
           source-dir: ./_build/html
           action: deploy
+
+      - name: create-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ~/
