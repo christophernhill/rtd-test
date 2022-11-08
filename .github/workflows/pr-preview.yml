@@ -39,4 +39,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: ~/runner/work/
+          path: /home/runner/work/rtd-test/
+
+      - name: whats-going-on
+        run : |
+          /bin/pwd
+          /bin/ls -altr
