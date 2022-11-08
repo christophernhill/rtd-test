@@ -35,6 +35,8 @@ Header 5
 Header 6
 --------
 
+  Some header 6 text
+
 Inline navigation
 -----------------
 
