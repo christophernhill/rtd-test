@@ -27,6 +27,6 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./
-        ruw: |
+        run: |
           pwd
           /bin/ls -altr
