@@ -14,6 +14,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Get Pull Request Number
+        id: pr
+        run: echo "::set-output name=pull_request_number::$(gh pr view --json number -q .number || echo "")"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # reference as ${{ steps.pr.outputs.pull_request_number }}
+
       - name: install
         run: |
           python3 -m pip install -U pip
@@ -29,14 +36,8 @@ jobs:
           touch _build/html/.nojekyll
           ls -altr _build/html
 
-          ### - name: checkout-tree
-          ### uses: rossjrw/pr-preview-action@v1
-          ### with:
-          ### source-dir: ./_build/html
-          ### action: deploy
-
       - name: create-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: pr-preview-artifact
+          name: ${{ github.event.repository.name }}_PR${{ github.event.issue.number }}-preview-artifact
           path: /home/runner/work/rtd-test/rtd-test/_build/html/
