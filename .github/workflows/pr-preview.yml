@@ -36,8 +36,13 @@ jobs:
           touch _build/html/.nojekyll
           ls -altr _build/html
 
+      - name: show-pull-number
+        run: |
+          echo "steps.pr.outputs.pull_request_number" = ${{ steps.pr.outputs.pull_request_number }}
+          echo "github.event.issue.number" = ${{ github.event.issue.number }}
+
       - name: create-artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.event.repository.name }}_PR${{ steps.pr.outputs.pull_request_number }}-preview-artifact
+          name: ${{ github.event.repository.name }}_PR_${{ github.event.issue.number }}_preview-artifact
           path: /home/runner/work/rtd-test/rtd-test/_build/html/
