@@ -2,7 +2,7 @@
 
    * [Current draft outline](test.md#draft-outine)
    * [How to preview a PR](test.md#previewing-a-pr)
-   * How to test build docs locally under OSX
+   * [How to test build docs locally under OSX](test.md#notes-on-setting-up-to-build-locally-on-osx)
 
 ## Draft outline
 
