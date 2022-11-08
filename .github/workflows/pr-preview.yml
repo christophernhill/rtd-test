@@ -42,7 +42,8 @@ jobs:
           echo "github.event.issue.number" = ${{ github.event.issue.number }}
 
       - name: Dump github context
-        env: GITHUB_CONTEXT: ${{ toJson(github) }}
+        env: 
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           echo -e "$GITHUB_CONTEXT\n"
         shell: bash
