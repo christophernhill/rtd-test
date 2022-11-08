@@ -24,3 +24,9 @@ jobs:
         with:
           source-dir: ./build/
           action: deploy
+
+     - name: create-artifact
+       uses: actions/upload-artifcat@v3
+       with:
+         name: my-artifact
+         path: pr-preview/
