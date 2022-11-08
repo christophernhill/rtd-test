@@ -8,6 +8,9 @@ A reference to `Inline navigation`_
 
 
 
+
+
+
 A header
 --------
 
@@ -28,3 +31,8 @@ Header 6
 
 Inline navigation
 -----------------
+
+.. toctree::
+   :maxdepth: 2
+
+   subpages1/index
