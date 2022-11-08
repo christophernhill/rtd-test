@@ -39,6 +39,6 @@ Inline navigation
 -----------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    subpages1/index
